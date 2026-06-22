@@ -1,4 +1,4 @@
-Placement Portal
+Placement Portal Application
 
 A Full Stack Placement Portal Application built using Flask, React, SQLite, SQLAlchemy, JWT Authentication, and Bootstrap.
 
