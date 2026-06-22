@@ -6,12 +6,14 @@ from flask_jwt_extended import (
 )
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from config import Config
 from extensions import db
 from seed import seed_admin
 
 app = Flask(__name__)
 app.config.from_object(Config)
+CORS(app)
 
 db.init_app(app)
 jwt = JWTManager(app)
@@ -64,6 +66,7 @@ def register_student():
     "message": "Login Successful",
     "token": token
 }), 200
+print("LOGIN ROUTE LOADED")
 @app.route("/login/student", methods=["POST"])
 def login_student():
 
@@ -244,4 +247,3 @@ def reject_company(company_id):
     }), 200
 if __name__ == "__main__":
     app.run(debug=True)
-
