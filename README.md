@@ -1,78 +1,78 @@
-Placement Portal Application
+# Placement Portal Application
 
 A Full Stack Placement Portal Application built using Flask, React, SQLite, SQLAlchemy, JWT Authentication, and Bootstrap.
 
 The application streamlines campus recruitment by connecting Students, Companies, and Placement Cell Administrators through a role-based portal.
 
-=================================================================
+---
 
-PROJECT OVERVIEW
+## Project Overview
 
 The Placement Portal provides separate modules for:
 
-• Students
-• Companies
-• Administrators
+- Students
+- Companies
+- Administrators
 
 The system allows users to register, login securely, and access their respective dashboards.
 
-=================================================================
+---
 
-FEATURES IMPLEMENTED (M1 & M2)
+## Features Implemented (M1 & M2)
 
-Authentication
+### Authentication
 
-• Student Registration
-• Student Login
-• Company Registration
-• Company Login
-• Admin Login
-• JWT Authentication
-• Logout Functionality
+- Student Registration
+- Student Login
+- Company Registration
+- Company Login
+- Admin Login
+- JWT Authentication
+- Logout Functionality
 
-Student Module
+### Student Module
 
-• Student Registration Form
-• Student Login
-• Student Dashboard
-• Profile Display
+- Student Registration Form
+- Student Login
+- Student Dashboard
+- Profile Display
 
-Company Module
+### Company Module
 
-• Company Registration Form
-• Company Login
-• Company Dashboard
+- Company Registration Form
+- Company Login
+- Company Dashboard
 
-Admin Module
+### Admin Module
 
-• Admin Login
-• Admin Dashboard
+- Admin Login
+- Admin Dashboard
 
-=================================================================
+---
 
-TECH STACK
+## Tech Stack
 
-Frontend
+### Frontend
 
-• React.js
-• React Router DOM
-• Axios
-• Bootstrap 5
+- React.js
+- React Router DOM
+- Axios
+- Bootstrap 5
 
-Backend
+### Backend
 
-• Flask
-• Flask SQLAlchemy
-• Flask JWT Extended
-• Werkzeug
+- Flask
+- Flask SQLAlchemy
+- Flask JWT Extended
+- Werkzeug
 
-Database
+### Database
 
-• SQLite
+- SQLite
 
-=================================================================
+---
 
-PROJECT STRUCTURE
+## Project Structure
 
 Placement Portal
 
