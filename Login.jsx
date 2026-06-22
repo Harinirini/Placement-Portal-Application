@@ -1,10 +1,11 @@
 import { useState } from "react";
 import API from "./api";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       const response = await API.post("/login/student", {
@@ -15,11 +16,12 @@ function Login() {
       localStorage.setItem("token", response.data.token);
 
       alert("Login Successful!");
+      navigate("/dashboard");
       console.log(response.data);
     } catch (error) {
-      alert("Login Failed!");
-      console.error(error);
-    }
+      console.log(error.response?.data);
+      alert(error.response?.data?.message || "Login Failed!");
+    }   
   };
 
   return (
