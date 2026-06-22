@@ -1,16 +1,100 @@
-# React + Vite
+Placement Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Full Stack Placement Portal Application built using Flask, React, SQLite, SQLAlchemy, JWT Authentication, and Bootstrap.
 
-Currently, two official plugins are available:
+The application streamlines campus recruitment by connecting Students, Companies, and Placement Cell Administrators through a role-based portal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+=================================================================
 
-## React Compiler
+PROJECT OVERVIEW
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The Placement Portal provides separate modules for:
 
-## Expanding the ESLint configuration
+• Students
+• Companies
+• Administrators
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The system allows users to register, login securely, and access their respective dashboards.
+
+=================================================================
+
+FEATURES IMPLEMENTED (M1 & M2)
+
+Authentication
+
+• Student Registration
+• Student Login
+• Company Registration
+• Company Login
+• Admin Login
+• JWT Authentication
+• Logout Functionality
+
+Student Module
+
+• Student Registration Form
+• Student Login
+• Student Dashboard
+• Profile Display
+
+Company Module
+
+• Company Registration Form
+• Company Login
+• Company Dashboard
+
+Admin Module
+
+• Admin Login
+• Admin Dashboard
+
+=================================================================
+
+TECH STACK
+
+Frontend
+
+• React.js
+• React Router DOM
+• Axios
+• Bootstrap 5
+
+Backend
+
+• Flask
+• Flask SQLAlchemy
+• Flask JWT Extended
+• Werkzeug
+
+Database
+
+• SQLite
+
+=================================================================
+
+PROJECT STRUCTURE
+
+Placement Portal
+
+├── frontend  
+│   ├── src  
+│   │   ├── pages  
+│   │   │   ├── Login.jsx  
+│   │   │   ├── StudentRegister.jsx  
+│   │   │   ├── CompanyRegister.jsx  
+│   │   │   ├── CompanyLogin.jsx  
+│   │   │   ├── AdminLogin.jsx  
+│   │   │   ├── Dashboard.jsx  
+│   │   │   ├── CompanyDashboard.jsx  
+│   │   │   └── AdminDashboard.jsx  
+│   │   ├── api.js  
+│   │   ├── App.jsx  
+│   │   └── main.jsx  
+│
+├── app.py  
+├── models.py  
+├── extensions.py  
+├── config.py  
+├── seed.py  
+├── placement.db  
+└── README.md  
