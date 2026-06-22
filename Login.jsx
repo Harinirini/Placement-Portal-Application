@@ -1,4 +1,27 @@
+import { useState } from "react";
+import API from "./api";
+
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      const response = await API.post("/login/student", {
+        email,
+        password,
+      });
+
+      localStorage.setItem("token", response.data.token);
+
+      alert("Login Successful!");
+      console.log(response.data);
+    } catch (error) {
+      alert("Login Failed!");
+      console.error(error);
+    }
+  };
+
   return (
     <div className="container mt-5">
       <h1>Placement Portal</h1>
@@ -10,15 +33,22 @@ function Login() {
           type="email"
           className="form-control mb-3"
           placeholder="Enter Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
           type="password"
           className="form-control mb-3"
           placeholder="Enter Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="btn btn-primary">
+        <button
+          className="btn btn-primary"
+          onClick={handleLogin}
+        >
           Login
         </button>
       </div>
